@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Testbench.vhdl
+source_file = 1, D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/DUT.vhdl
+source_file = 1, D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd
+source_file = 1, D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Reg_File.vhd
+source_file = 1, D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/muxes.vhd
+source_file = 1, D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/memory.vhd
+source_file = 1, D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd
+source_file = 1, D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/db/DUT.cbx.xml
+design_name = DUT
+instance = comp, \output_vector~I\, output_vector, DUT, 1
+instance = comp, \input_vector~I\, input_vector, DUT, 1

@@ -1,0 +1,347 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/simulation/modelsim
+Ealu
+Z1 w1651501929
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 6
+R0
+Z5 8D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd
+Z6 FD:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd
+l0
+L5 1
+V[Dz0ERMkU6M=Xm_ajfVWP3
+!s100 @UhNkiFZP:Sb=PD8cXWo93
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1652021318
+!i10b 1
+Z9 !s108 1652021318.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd|
+Z11 !s107 D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Aalu_arch
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 [Dz0ERMkU6M=Xm_ajfVWP3
+!i122 6
+l14
+L13 37
+VfNFXJBUzjnnb`N<ZN?KYm0
+!s100 lNO`;F@1Sc2FEhEF:cg@13
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Edatapath
+Z14 w1651588347
+R2
+R3
+R4
+!i122 5
+R0
+Z15 8D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd
+Z16 FD:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd
+l0
+L5 1
+VW2]5RiWcm9?6lVKGCjVUk0
+!s100 6coB]g5kgF@Pe9TJ>_;9Z0
+R7
+31
+R8
+!i10b 1
+Z17 !s108 1652021317.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd|
+Z19 !s107 D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd|
+!i113 1
+R12
+R13
+Adatapath_arch
+R2
+R3
+R4
+DEx4 work 8 datapath 0 22 W2]5RiWcm9?6lVKGCjVUk0
+!i122 5
+l33
+L11 259
+V]oiiCBWbhnO@6]BG7:P7D0
+!s100 j>L:7@cfN?_2b>8U:1Y^h0
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Edut
+Z20 w1651236401
+R3
+R4
+!i122 1
+R0
+Z21 8D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/DUT.vhdl
+Z22 FD:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/DUT.vhdl
+l0
+L3 1
+VjI;]?co>C0b?7<ThQJkXM1
+!s100 :P66D9][@`aAOj^gRiDB]1
+R7
+31
+Z23 !s110 1652021317
+!i10b 1
+R17
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/DUT.vhdl|
+Z25 !s107 D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/DUT.vhdl|
+!i113 1
+R12
+R13
+Adutwrap
+R3
+R4
+DEx4 work 3 dut 0 22 jI;]?co>C0b?7<ThQJkXM1
+!i122 1
+l12
+L8 8
+VN0i4fg7hKH8@=0LZRh56?3
+!s100 k>zS15K5f5zW1fff5l_9o2
+R7
+31
+R23
+!i10b 1
+R17
+R24
+R25
+!i113 1
+R12
+R13
+Ememory
+Z26 w1652021296
+R2
+R3
+R4
+!i122 4
+R0
+Z27 8D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/memory.vhd
+Z28 FD:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/memory.vhd
+l0
+L5 1
+VYjN1CRJ>L>6XLWP@a=^DY1
+!s100 13Ya;00DI`GcJVX3Cfj>W0
+R7
+31
+R23
+!i10b 1
+R17
+Z29 !s90 -reportprogress|300|-93|-work|work|D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/memory.vhd|
+Z30 !s107 D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/memory.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 6 memory 0 22 YjN1CRJ>L>6XLWP@a=^DY1
+!i122 4
+l19
+L15 15
+VXV[Xb_CeGZHo;KCNQZjM92
+!s100 mgAh2HWmAL`Tke;5aAn?40
+R7
+31
+R23
+!i10b 1
+R17
+R29
+R30
+!i113 1
+R12
+R13
+Emux8
+Z31 w1651237657
+R3
+R4
+!i122 3
+R0
+Z32 8D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/muxes.vhd
+Z33 FD:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/muxes.vhd
+l0
+L4 1
+V7^EUG^DAYINgnAOFbf4931
+!s100 4fcUQGPokE?8UU?@ROnL@2
+R7
+31
+R23
+!i10b 1
+R17
+Z34 !s90 -reportprogress|300|-93|-work|work|D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/muxes.vhd|
+Z35 !s107 D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/muxes.vhd|
+!i113 1
+R12
+R13
+Amux8_arch
+R3
+R4
+DEx4 work 4 mux8 0 22 7^EUG^DAYINgnAOFbf4931
+!i122 3
+l11
+L10 24
+VIF0?kI5dKz><:fN8>D<Q51
+!s100 kAI2BAe_z7[MhOEmSRY]=1
+R7
+31
+R23
+!i10b 1
+R17
+R34
+R35
+!i113 1
+R12
+R13
+Erf
+Z36 w1652021227
+R3
+R4
+!i122 7
+R0
+Z37 8D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Reg_File.vhd
+Z38 FD:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Reg_File.vhd
+l0
+L6 1
+VdRH[EiAA`6?h@BUWbaCHA1
+!s100 9XkR0zk98bS^mP3B?n=oW0
+R7
+31
+R8
+!i10b 1
+R9
+Z39 !s90 -reportprogress|300|-93|-work|work|D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Reg_File.vhd|
+Z40 !s107 D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Reg_File.vhd|
+!i113 1
+R12
+R13
+Arf_arch
+R3
+R4
+DEx4 work 2 rf 0 22 dRH[EiAA`6?h@BUWbaCHA1
+!i122 7
+l19
+L12 38
+VYU982=ALXdJn9j^U<?4^I0
+!s100 ZP5jVm^^<4oaZG^@=G[250
+R7
+31
+R8
+!i10b 1
+R9
+R39
+R40
+!i113 1
+R12
+R13
+Etestbench
+Z41 w1651485552
+R4
+R3
+!i122 0
+R0
+Z42 8D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Testbench.vhdl
+Z43 FD:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R7
+31
+R23
+!i10b 1
+R17
+Z44 !s90 -reportprogress|300|-93|-work|work|D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Testbench.vhdl|
+Z45 !s107 D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Testbench.vhdl|
+!i113 1
+R12
+R13
+Abehave
+R4
+R3
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 0
+l69
+L9 132
+V_;]ej65K`]D14=9@eeEi51
+!s100 0HUVgm8@XV4^_ZNI6z?z82
+R7
+31
+R23
+!i10b 1
+R17
+R44
+R45
+!i113 1
+R12
+R13
+Etop_level_entity
+Z46 w1651586794
+R2
+R3
+R4
+!i122 8
+R0
+Z47 8D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd
+Z48 FD:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd
+l0
+L5 1
+VeJfROXhjGj?j^RSn?M9:H1
+!s100 M]HIXYS8z<<1P^E`4bg512
+R7
+31
+R8
+!i10b 1
+R9
+Z49 !s90 -reportprogress|300|-93|-work|work|D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd|
+Z50 !s107 D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd|
+!i113 1
+R12
+R13
+Acontrol_unit
+R2
+R3
+R4
+Z51 DEx4 work 16 top_level_entity 0 22 eJfROXhjGj?j^RSn?M9:H1
+!i122 8
+l23
+Z52 L9 1012
+Z53 V1Qh1o>hJn_O?J0jO96=Z[1
+Z54 !s100 giLQU3iQEaoCP929>YJdc3
+R7
+31
+R8
+!i10b 1
+R9
+R49
+R50
+!i113 1
+R12
+R13

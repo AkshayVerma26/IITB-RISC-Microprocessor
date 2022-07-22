@@ -1,0 +1,313 @@
+# Reading pref.tcl
+# do DUT_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:26 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/Testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 23:30:26 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/DUT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:26 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/DUT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 23:30:26 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/WB_Stage.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:27 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/WB_Stage.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity WB_Stage
+# -- Compiling architecture WB_Stage_Arch of WB_Stage
+# End time: 23:30:27 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/RR_EXE.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:27 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/RR_EXE.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RR_EXE
+# -- Compiling architecture RR_EXE_arch of RR_EXE
+# End time: 23:30:27 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/muxes.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:27 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/muxes.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux8
+# -- Compiling architecture mux8_arch of mux8
+# End time: 23:30:27 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/MEM_WB.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:27 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/MEM_WB.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MEM_WB
+# -- Compiling architecture MEM_WB_Arch of MEM_WB
+# End time: 23:30:27 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:27 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory
+# -- Compiling architecture struct of data_memory
+# End time: 23:30:27 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/IM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:27 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/IM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instruction_memory
+# -- Compiling architecture struct of instruction_memory
+# End time: 23:30:27 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/IF_ID.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:27 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/IF_ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity IF_ID
+# -- Compiling architecture IF_ID_arch of IF_ID
+# End time: 23:30:27 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/ID_stage.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:27 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/ID_stage.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ID_stage
+# -- Compiling architecture ID_arch of ID_stage
+# End time: 23:30:27 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/ID_RR.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:28 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/ID_RR.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ID_RR
+# -- Compiling architecture ID_RR_arch of ID_RR
+# End time: 23:30:28 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/EXE_MEM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:28 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/EXE_MEM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity EXE_MEM
+# -- Compiling architecture EXE_MEM_Arch of EXE_MEM
+# End time: 23:30:28 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/ALU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:28 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture alu_arch of alu
+# End time: 23:30:28 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/Top_Level_Entity.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:28 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/Top_Level_Entity.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Top_Level_Entity
+# -- Compiling architecture TLE_arch of Top_Level_Entity
+# End time: 23:30:28 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/RR_stage.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:28 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/RR_stage.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RR_stage
+# -- Compiling architecture RR_arch of RR_stage
+# End time: 23:30:28 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/Reg_File.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:28 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/Reg_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RF
+# -- Compiling architecture RF_arch of RF
+# End time: 23:30:28 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/MEM_Stage.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:28 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/MEM_Stage.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MEM_Stage
+# -- Compiling architecture MEM_Stage_Arch of MEM_Stage
+# End time: 23:30:28 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/FU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:28 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/FU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity forwarding_unit
+# -- Compiling architecture forwarding_unit_arch of forwarding_unit
+# ** Warning: D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/FU.vhd(33): (vcom-1445) Duplicate signal "ir3" found in sensitivity list.
+# End time: 23:30:28 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/EX_stage.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:28 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/EX_stage.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity EX_stage
+# -- Compiling architecture EX_arch of EX_stage
+# End time: 23:30:28 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/Branch_Control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:28 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/Branch_Control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Branch_Control
+# -- Compiling architecture branch_control_arch of Branch_Control
+# End time: 23:30:28 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/IF_Stage.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:29 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/IF_Stage.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity IF_Stage
+# -- Compiling architecture IF_Arch of IF_Stage
+# End time: 23:30:29 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:29 on May 10,2022
+# vcom -reportprogress 300 -93 -work work D:/IITB/EE 309 Microprocessor/ProjectBouns/IITB_RISC_Pipelined/Testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 23:30:29 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 23:30:29 on May 10,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading work.top_level_entity(tle_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.if_stage(if_arch)
+# Loading work.instruction_memory(struct)
+# Loading work.if_id(if_id_arch)
+# Loading work.id_stage(id_arch)
+# Loading work.id_rr(id_rr_arch)
+# Loading work.rr_stage(rr_arch)
+# Loading work.rf(rf_arch)
+# Loading work.mux8(mux8_arch)
+# Loading work.rr_exe(rr_exe_arch)
+# Loading work.ex_stage(ex_arch)
+# Loading work.alu(alu_arch)
+# Loading work.exe_mem(exe_mem_arch)
+# Loading work.mem_stage(mem_stage_arch)
+# Loading work.data_memory(struct)
+# Loading work.mem_wb(mem_wb_arch)
+# Loading work.wb_stage(wb_stage_arch)
+# Loading work.branch_control(branch_control_arch)
+# Loading work.forwarding_unit(forwarding_unit_arch)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/TLE/MEMstage/DM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/dut_instance/TLE/IFstage/IM
+# ** Note: SUCCESS, all tests passed.
+#    Time: 120384 ns  Iteration: 0  Instance: /testbench
+# End time: 23:30:49 on May 10,2022, Elapsed time: 0:00:20
+# Errors: 0, Warnings: 2

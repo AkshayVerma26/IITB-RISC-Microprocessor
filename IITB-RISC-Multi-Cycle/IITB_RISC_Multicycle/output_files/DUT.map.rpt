@@ -1,0 +1,801 @@
+Analysis & Synthesis report for DUT
+Sun May 08 20:18:28 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |DUT|Top_Level_Entity:TLE|y_present
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: Top_Level_Entity:TLE|datapath:dpth|memory:MEM
+ 14. Port Connectivity Checks: "Top_Level_Entity:TLE|datapath:dpth"
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun May 08 20:18:28 2022       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; DUT                                         ;
+; Top-level Entity Name       ; DUT                                         ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 0                                           ;
+; Total pins                  ; 2                                           ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 5M1270ZT144C5      ;                    ;
+; Top-level entity name                                            ; DUT                ; DUT                ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; Testbench.vhdl                   ; yes             ; User VHDL File  ; D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Testbench.vhdl       ;         ;
+; DUT.vhdl                         ; yes             ; User VHDL File  ; D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/DUT.vhdl             ;         ;
+; Top_Level_Entity.vhd             ; yes             ; User VHDL File  ; D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd ;         ;
+; Reg_File.vhd                     ; yes             ; User VHDL File  ; D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Reg_File.vhd         ;         ;
+; muxes.vhd                        ; yes             ; User VHDL File  ; D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/muxes.vhd            ;         ;
+; memory.vhd                       ; yes             ; User VHDL File  ; D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/memory.vhd           ;         ;
+; Datapath.vhd                     ; yes             ; User VHDL File  ; D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd         ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd              ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 0     ;
+;     -- Combinational with no register       ; 0     ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- 2 input functions                    ; 0     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 2     ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; |DUT                       ; 0 (0)       ; 0            ; 0          ; 2    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DUT|Top_Level_Entity:TLE|y_present                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+----------------+
+; Name           ; y_present.s29 ; y_present.s28 ; y_present.s27 ; y_present.s26 ; y_present.s25 ; y_present.s24 ; y_present.s23 ; y_present.s22 ; y_present.s21 ; y_present.s20 ; y_present.s19 ; y_present.s18 ; y_present.s17 ; y_present.s16 ; y_present.s15 ; y_present.s14 ; y_present.s13 ; y_present.s12 ; y_present.s11 ; y_present.s10 ; y_present.s9 ; y_present.s8 ; y_present.s7 ; y_present.s6 ; y_present.s5 ; y_present.s4 ; y_present.s3 ; y_present.s2 ; y_present.s1 ; y_present.init ;
++----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+----------------+
+; y_present.init ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0              ;
+; y_present.s1   ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 1              ;
+; y_present.s2   ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 1              ;
+; y_present.s3   ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 1              ;
+; y_present.s4   ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s5   ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s6   ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s7   ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s8   ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s9   ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s10  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s11  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s12  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s13  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s14  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s15  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s16  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s17  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s18  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s19  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s20  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s21  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s22  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s23  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s24  ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s25  ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s26  ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s27  ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s28  ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
+; y_present.s29  ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1              ;
++----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+----------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++-----------------------------------------------------------+--------------------+
+; Register name                                             ; Reason for Removal ;
++-----------------------------------------------------------+--------------------+
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[0]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[0]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[0]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[0]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[0]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[0]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[0]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[0]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[15] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[15] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[15] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[15] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[15] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[15] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[15] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[15] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[14] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[14] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[14] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[14] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[14] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[14] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[14] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[14] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[13] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[13] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[13] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[13] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[13] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[13] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[13] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[13] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[12] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[12] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[12] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[12] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[12] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[12] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[12] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[12] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[11] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[11] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[11] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[11] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[11] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[11] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[11] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[11] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[10] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[10] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[10] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[10] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[10] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[10] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[10] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[10] ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[9]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[9]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[9]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[9]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[9]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[9]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[9]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[9]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[8]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[8]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[8]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[8]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[8]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[8]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[8]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[8]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[7]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[7]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[7]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[7]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[7]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[7]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[7]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[7]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[6]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[6]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[6]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[6]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[6]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[6]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[6]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[6]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[5]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[5]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[5]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[5]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[5]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[5]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[5]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[5]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[4]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[4]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[4]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[4]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[4]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[4]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[4]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[4]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[3]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[3]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[3]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[3]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[3]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[3]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[3]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[3]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[2]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[2]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[2]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[2]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[2]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[2]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[2]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[2]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[1]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r1[1]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r2[1]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r3[1]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r4[1]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r5[1]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r6[1]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r7[1]  ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.init                       ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s1                         ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s2                         ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s3                         ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s4                         ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s5                         ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s6                         ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s7                         ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s8                         ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s9                         ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s10                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s11                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s12                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s13                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s14                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s15                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s16                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s17                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s18                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s19                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s20                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s21                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s22                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s23                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s24                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s25                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s26                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s27                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s28                        ; Lost fanout        ;
+; Top_Level_Entity:TLE|y_present.s29                        ; Lost fanout        ;
+; Total Number of Removed Registers = 158                   ;                    ;
++-----------------------------------------------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                             ;
++----------------------------------------------------------+--------------------+-------------------------------------------------------------------------+
+; Register name                                            ; Reason for Removal ; Registers Removed due to This Register                                  ;
++----------------------------------------------------------+--------------------+-------------------------------------------------------------------------+
+; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[0] ; Lost Fanouts       ; Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|r0[12],              ;
+;                                                          ;                    ; Top_Level_Entity:TLE|y_present.init, Top_Level_Entity:TLE|y_present.s1, ;
+;                                                          ;                    ; Top_Level_Entity:TLE|y_present.s2, Top_Level_Entity:TLE|y_present.s4,   ;
+;                                                          ;                    ; Top_Level_Entity:TLE|y_present.s5, Top_Level_Entity:TLE|y_present.s6,   ;
+;                                                          ;                    ; Top_Level_Entity:TLE|y_present.s7, Top_Level_Entity:TLE|y_present.s10,  ;
+;                                                          ;                    ; Top_Level_Entity:TLE|y_present.s12, Top_Level_Entity:TLE|y_present.s17, ;
+;                                                          ;                    ; Top_Level_Entity:TLE|y_present.s21                                      ;
++----------------------------------------------------------+--------------------+-------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|alu:ALU1|Mux1                 ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|mux8:m1|Mux13 ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux321                        ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|mux8:m0|Mux5  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux262                        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux267                        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux257                        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux270                        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux289                        ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux136                        ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux194                        ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux246                        ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux278                        ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux162                        ;
+; 10:1               ; 16 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; No         ; |DUT|Top_Level_Entity:TLE|datapath:dpth|Mux334                        ;
+; 42:1               ; 23 bits   ; 644 LEs       ; 552 LEs              ; 92 LEs                 ; No         ; |DUT|Top_Level_Entity:TLE|y_present                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top_Level_Entity:TLE|datapath:dpth|memory:MEM ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; mem_a_width    ; 16    ; Signed Integer                                                    ;
+; data_width     ; 16    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "Top_Level_Entity:TLE|datapath:dpth" ;
++-----------+-------+----------+---------------------------------+
+; Port      ; Type  ; Severity ; Details                         ;
++-----------+-------+----------+---------------------------------+
+; input[36] ; Input ; Info     ; Stuck at GND                    ;
++-----------+-------+----------+---------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun May 08 20:18:20 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC -c DUT
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhdl
+    Info (12022): Found design unit 1: Testbench-Behave File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Testbench.vhdl Line: 9
+    Info (12023): Found entity 1: Testbench File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Testbench.vhdl Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file dut.vhdl
+    Info (12022): Found design unit 1: DUT-DutWrap File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/DUT.vhdl Line: 8
+    Info (12023): Found entity 1: DUT File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/DUT.vhdl Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file top_level_entity.vhd
+    Info (12022): Found design unit 1: Top_Level_Entity-control_unit File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 9
+    Info (12023): Found entity 1: Top_Level_Entity File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file reg_file.vhd
+    Info (12022): Found design unit 1: RF-RF_arch File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Reg_File.vhd Line: 12
+    Info (12023): Found entity 1: RF File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Reg_File.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file muxes.vhd
+    Info (12022): Found design unit 1: mux8-mux8_arch File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/muxes.vhd Line: 10
+    Info (12023): Found entity 1: mux8 File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/muxes.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
+    Info (12022): Found design unit 1: memory-struct File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/memory.vhd Line: 15
+    Info (12023): Found entity 1: memory File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/memory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: datapath-datapath_arch File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 11
+    Info (12023): Found entity 1: datapath File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-alu_arch File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd Line: 13
+    Info (12023): Found entity 1: alu File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd Line: 5
+Info (12127): Elaborating entity "DUT" for the top level hierarchy
+Info (12128): Elaborating entity "Top_Level_Entity" for hierarchy "Top_Level_Entity:TLE" File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/DUT.vhdl Line: 13
+Warning (10036): Verilog HDL or VHDL warning at Top_Level_Entity.vhd(17): object "y_next" assigned a value but never read File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at Top_Level_Entity.vhd(170): inferring latch(es) for signal or variable "sig_mem_din", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 170
+Info (10041): Inferred latch for "y_next.s29" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s28" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s27" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s26" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s25" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s24" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s23" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s22" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s21" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s20" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s19" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s18" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s17" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s16" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s15" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s14" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s13" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s12" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s11" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s10" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s9" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s8" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s7" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s6" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s5" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s4" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s3" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s2" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.s1" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "y_next.init" at Top_Level_Entity.vhd(839) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 839
+Info (10041): Inferred latch for "sig_mem_din" at Top_Level_Entity.vhd(170) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 170
+Info (12128): Elaborating entity "datapath" for hierarchy "Top_Level_Entity:TLE|datapath:dpth" File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Top_Level_Entity.vhd Line: 52
+Warning (10540): VHDL Signal Declaration warning at Datapath.vhd(18): used explicit default value for signal "k" because signal was never assigned a value File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 18
+Warning (10542): VHDL Variable Declaration warning at Datapath.vhd(69): used initial value expression for variable "C" because variable was never assigned a value File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(74): signal "PC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 74
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(76): signal "RF_D1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(78): signal "T1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(85): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 85
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(87): signal "T2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(89): signal "S" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(91): signal "k" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(98): signal "MEM_Dout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(105): signal "RF_D2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(112): signal "T2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(114): signal "T2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(121): signal "PC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 121
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(128): signal "T1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(135): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(137): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(144): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 144
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(146): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 146
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(153): signal "MEM_Dout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 153
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(160): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(162): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 162
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(164): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 164
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(171): signal "T2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 171
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(172): signal "T2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 172
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(176): signal "T2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 176
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(177): signal "T2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 177
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(181): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 181
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(184): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 184
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(186): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 186
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(188): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 188
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(190): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 190
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(193): signal "IR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 193
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(67): inferring latch(es) for signal or variable "ALU_A", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(67): inferring latch(es) for signal or variable "ALU_B", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(67): inferring latch(es) for signal or variable "IR", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(67): inferring latch(es) for signal or variable "MEM_Din", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(67): inferring latch(es) for signal or variable "RF_A2", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(67): inferring latch(es) for signal or variable "RF_A3", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(67): inferring latch(es) for signal or variable "RF_A1", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(67): inferring latch(es) for signal or variable "S", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(217): signal "PC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 217
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(219): signal "T1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 219
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(230): signal "T1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 230
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(243): signal "T1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 243
+Warning (10492): VHDL Process Statement warning at Datapath.vhd(259): signal "sig_t2_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 259
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(199): inferring latch(es) for signal or variable "MEM_A", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(199): inferring latch(es) for signal or variable "PC", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(199): inferring latch(es) for signal or variable "RF_D3", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(199): inferring latch(es) for signal or variable "T1", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Warning (10631): VHDL Process Statement warning at Datapath.vhd(199): inferring latch(es) for signal or variable "T2", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[0]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[1]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[2]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[3]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[4]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[5]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[6]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[7]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[8]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[9]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[10]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[11]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[12]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[13]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[14]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T2[15]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[0]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[1]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[2]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[3]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[4]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[5]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[6]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[7]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[8]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[9]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[10]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[11]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[12]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[13]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[14]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "T1[15]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[0]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[1]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[2]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[3]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[4]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[5]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[6]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[7]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[8]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[9]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[10]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[11]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[12]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[13]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[14]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "RF_D3[15]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[0]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[1]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[2]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[3]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[4]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[5]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[6]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[7]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[8]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[9]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[10]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[11]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[12]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[13]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[14]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "PC[15]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[0]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[1]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[2]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[3]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[4]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[5]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[6]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[7]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[8]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[9]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[10]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[11]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[12]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[13]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[14]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "MEM_A[15]" at Datapath.vhd(199) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 199
+Info (10041): Inferred latch for "S[0]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[1]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[2]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[3]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[4]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[5]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[6]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[7]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[8]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[9]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[10]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[11]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[12]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[13]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[14]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "S[15]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "RF_A1[0]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "RF_A1[1]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "RF_A1[2]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "RF_A3[0]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "RF_A3[1]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "RF_A3[2]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "RF_A2[0]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "RF_A2[1]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "RF_A2[2]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[0]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[1]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[2]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[3]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[4]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[5]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[6]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[7]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[8]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[9]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[10]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[11]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[12]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[13]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[14]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "MEM_Din[15]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[0]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[1]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[2]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[3]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[4]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[5]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[6]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[7]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[8]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[9]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[10]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[11]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[12]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[13]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[14]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "IR[15]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[0]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[1]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[2]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[3]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[4]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[5]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[6]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[7]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[8]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[9]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[10]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[11]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[12]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[13]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[14]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_B[15]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[0]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[1]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[2]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[3]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[4]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[5]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[6]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[7]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[8]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[9]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[10]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[11]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[12]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[13]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[14]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (10041): Inferred latch for "ALU_A[15]" at Datapath.vhd(67) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 67
+Info (12128): Elaborating entity "RF" for hierarchy "Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile" File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 61
+Info (12128): Elaborating entity "mux8" for hierarchy "Top_Level_Entity:TLE|datapath:dpth|RF:RegisterFile|mux8:m0" File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Reg_File.vhd Line: 20
+Info (12128): Elaborating entity "memory" for hierarchy "Top_Level_Entity:TLE|datapath:dpth|memory:MEM" File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 63
+Info (12128): Elaborating entity "alu" for hierarchy "Top_Level_Entity:TLE|datapath:dpth|alu:ALU1" File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/Datapath.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at ALU.vhd(38): signal "flag_change" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd Line: 38
+Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "c", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd Line: 15
+Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "o", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd Line: 15
+Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "cf", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd Line: 15
+Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "zf", which holds its previous value in one or more paths through the process File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd Line: 15
+Info (10041): Inferred latch for "zf" at ALU.vhd(15) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd Line: 15
+Info (10041): Inferred latch for "cf" at ALU.vhd(15) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd Line: 15
+Info (10041): Inferred latch for "c" at ALU.vhd(15) File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/ALU.vhd Line: 15
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "output_vector" is stuck at GND File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/DUT.vhdl Line: 5
+Info (17049): 158 registers lost all their fanouts during netlist optimizations.
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "input_vector" File: D:/IITB/EE 309 Microprocessor/Project1/IITB_RISC_Multicycle/DUT.vhdl Line: 4
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 4756 megabytes
+    Info: Processing ended: Sun May 08 20:18:28 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
+
+
